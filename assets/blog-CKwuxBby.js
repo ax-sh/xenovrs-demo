@@ -1,1 +1,0 @@
-import{j as e}from"./index-71cPCN7g.js";import{L as t}from"./index-Bo7v1Bzn.js";const o=()=>e.jsx(t,{children:e.jsx("section",{className:"h-screen text-white text-8xl bg-black grid place-items-center",children:"Blog"})});export{o as default};
