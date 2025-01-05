@@ -29,6 +29,24 @@ const links = {
   LINKEDIN: '',
 };
 
+function NewsletterForm() {
+  return (
+    <form className={'md:w-80 flex flex-col gap-5'}>
+      <strong>Sign up to our newsletter</strong>
+      <input
+        type={'email'}
+        className={
+          'active:outline-0 outline-0 w-full block bg-transparent border-b-3 p-2 !border-[#2563eb]'
+        }
+      />
+      <p className={'text-xs font-bold'}>
+        This site is protected by reCAPTHCHA and the Google <b>Privacy Policy</b>
+        and <b>Terms of Service</b> apply.
+      </p>
+    </form>
+  );
+}
+
 function Footer() {
   return (
     <footer className={'bg-yellow md:p-20 flex gap-4'}>
@@ -69,19 +87,7 @@ function Footer() {
               </a>
             ))}
           </List>
-          <form className={'md:w-80 flex flex-col gap-5'}>
-            <strong>Sign up to our newsletter</strong>
-            <input
-              type={'email'}
-              className={
-                'active:outline-0 outline-0  w-full block bg-transparent border-0 border-b-3 p-2'
-              }
-            />
-            <p className={'text-xs font-bold'}>
-              This site is protected by reCAPTHCHA and the Google <b>Privacy Policy</b>
-              and <b>Terms of Service</b> apply.
-            </p>
-          </form>
+          <NewsletterForm />
         </div>
         <div className={'md:flex justify-between'}>
           <div>© Centrix 2021. All Rights Resevered</div>
