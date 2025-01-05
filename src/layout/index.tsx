@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import React, { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import React from 'react';
 
 import Nav from './nav';
 import { navRoutesList } from './nav/constants.tsx';
