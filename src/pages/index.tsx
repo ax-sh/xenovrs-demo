@@ -3,8 +3,8 @@ import type { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 
 import Layout from '../layout';
 import { Poster } from '../layout/nav/constants.tsx';
+import { MasonryGalleryGrid } from '../ui/masonry-gallery-grid.tsx';
 import { SeeProjectButton } from '../ui/see-project-button.tsx';
-import { MasonryGalleryGrid } from './masonry-gallery-grid.tsx';
 
 const Header = ({ children, className }: ComponentPropsWithoutRef<'h4'>) => {
   return <h4 className={clsx('text-8xl drop-shadow-md mb-10', className)}>{children}</h4>;
