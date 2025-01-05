@@ -64,7 +64,7 @@ function Footer() {
             {navRoutesList.map((i) => (
               <a
                 href='.'
-                key={i}
+                key={`${i}-quick-links`}
                 className={
                   'uppercase font-bold !text-[#6657ff] hover:!text-gray-600 cursor-pointer'
                 }
@@ -77,7 +77,7 @@ function Footer() {
             <strong className={'text-xl'}>Follow</strong>
             {Object.entries(links).map(([key, value]) => (
               <a
-                key={value}
+                key={`follow-${value}-${key}`}
                 href={value}
                 className={
                   'uppercase font-bold !text-[#c457ff] hover:!text-gray-600 pointer cursor-pointer'
