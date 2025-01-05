@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type {ComponentPropsWithoutRef, PropsWithChildren} from 'react';
+import type { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 
 import Layout from '../layout';
 import { SeeProjectButton } from '../ui/see-project-button.tsx';
@@ -28,6 +28,7 @@ const Poster = {
   third: './thought-catalog--v7EOw5SA4I-unsplash.jpg',
   fourth: './juri-gianfrancesco-E05kCjekrwk-unsplash.jpg',
   five: './gabriel-salas-YnENabLdEKY-unsplash.jpg',
+  six: './yousef-espanioly-8ja-Ns8iqO4-unsplash.jpg',
 };
 
 function SectionLabel({ children }: PropsWithChildren) {
@@ -53,18 +54,29 @@ function Page() {
       <PresentSection imageUrl={Poster.second}>
         <div className={'row-start-2 col-start-3 text-white'}>
           <SectionLabel>Photography</SectionLabel>
-          <Header className={""}>
+          <Header className={''}>
             Contrast <br />
             Color <br />
             Theme
           </Header>
-        <SeeProjectButton />
+          <SeeProjectButton />
         </div>
       </PresentSection>
       <PresentSection imageUrl={Poster.second}>
         <div className={'row-start-2 col-start-3 text-white'}>
           <SectionLabel>Photography</SectionLabel>
-          <Header className={""}>
+          <Header className={''}>
+            Contrast <br />
+            Color <br />
+            Theme
+          </Header>
+          <SeeProjectButton />
+        </div>
+      </PresentSection>
+      <PresentSection imageUrl={Poster.six}>
+        <div className={'row-start-2 col-start-3 text-white'}>
+          <SectionLabel>Photography</SectionLabel>
+          <Header className={''}>
             Contrast <br />
             Color <br />
             Theme
