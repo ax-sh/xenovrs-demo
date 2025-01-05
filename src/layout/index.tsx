@@ -8,13 +8,16 @@ import { navRoutesList } from './nav/constants.tsx';
 interface ListProps extends ComponentPropsWithoutRef<'ul'> {
   render?: (props: ReactNode) => ReactNode;
 }
-
 export function List({ children, render, ...props }: ListProps) {
   return (
     <ul className={'list'} {...props}>
-      {React.Children.map(children, (child, index) => (
-        <li key={index}>{render ? render(child) : child}</li>
-      ))}
+      {React.Children.map(children, (child) =>
+        React.isValidElement(child) && child.key ? (
+          <li key={child.key}>{render ? render(child) : child}</li>
+        ) : (
+          <li>{render ? render(child) : child}</li>
+        )
+      )}
     </ul>
   );
 }
