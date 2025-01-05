@@ -40,7 +40,7 @@ function NavRoutes() {
 
 export default function Nav() {
   return (
-    <nav className={'page-nav'}>
+    <nav className={'page-nav z-50'}>
       <NavLogo />
       <NavRoutes />
       <NavLinks />

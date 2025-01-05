@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import type { PropsWithChildren } from 'react';
 
 import Layout from '../layout';
@@ -25,6 +26,7 @@ const Poster = {
   second: './kimson-doan-HD8KlyWRYYM-unsplash.jpg',
   third: './thought-catalog--v7EOw5SA4I-unsplash.jpg',
   fourth: './juri-gianfrancesco-E05kCjekrwk-unsplash.jpg',
+  five: './gabriel-salas-YnENabLdEKY-unsplash.jpg',
 };
 
 function Page() {
@@ -51,10 +53,14 @@ function Page() {
         </div>
       </PresentSection>
       <PresentSection imageUrl={Poster.third}>
-        <div
-          className={
-            'masonary row-span-3 col-span-12 text-white grid grid-cols-3 grid-rows-2 p-20 gap-3 h-screen'
-          }
+        <article
+          className={clsx(
+            'masonary',
+            'row-span-3 col-span-12 grid grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-3',
+            'text-white p-20',
+            'lg:h-screen min-h-screen'
+            // 'sm:[&>figure]:!aspect-square '
+          )}
         >
           <figure className={'row-span-2 relative'}>
             <img alt='' src={Poster.fourth} />
@@ -63,13 +69,13 @@ function Page() {
             </caption>
           </figure>
           <figure className={'md:row-span-1 md:col-start-2 relative'}>
-            <img alt='' src={Poster.second} />
+            <img alt='' src={Poster.third} />
             <caption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
               Looking Images Tell a Story
             </caption>
           </figure>
           <figure className={'md:row-span-1 md:col-start-3 relative'}>
-            <img alt='' src={Poster.fourth} />
+            <img alt='' src={Poster.five} />
             <caption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
               Being Images Tell a Story
             </caption>
@@ -80,7 +86,7 @@ function Page() {
               All Images Tell a Story
             </caption>
           </figure>
-        </div>
+        </article>
       </PresentSection>
     </Layout>
   );
