@@ -62,28 +62,28 @@ function Page() {
           )}
         >
           <figure className={'row-span-2 relative'}>
-            <img alt='' src={Poster.fourth} />
-            <caption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
+            <img alt='Thinking Images Tell a Story' src={Poster.fourth} />
+            <figcaption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
               Thinking Images Tell a Story
-            </caption>
+            </figcaption>
           </figure>
           <figure className={'md:row-span-1 md:col-start-2 relative'}>
-            <img alt='' src={Poster.third} />
-            <caption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
+            <img alt='Looking Images Tell a Story' src={Poster.third} />
+            <figcaption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
               Looking Images Tell a Story
-            </caption>
+            </figcaption>
           </figure>
           <figure className={'md:row-span-1 md:col-start-3 relative'}>
-            <img alt='' src={Poster.five} />
-            <caption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
+            <img alt='Being Images Tell a Story' src={Poster.five} />
+            <figcaption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
               Being Images Tell a Story
-            </caption>
+            </figcaption>
           </figure>
           <figure className={'md:col-start-2 md:col-span-2 md:row-start-2 md:row-end-3 relative'}>
-            <img alt='' src={Poster.second} />
-            <caption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
+            <img alt='All Images Tell a Story' src={Poster.second} />
+            <figcaption className='absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded'>
               All Images Tell a Story
-            </caption>
+            </figcaption>
           </figure>
         </article>
       </PresentSection>
