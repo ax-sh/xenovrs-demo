@@ -1,4 +1,3 @@
-import React from 'react';
 import { CgFacebook } from 'react-icons/cg';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { ImTwitter } from 'react-icons/im';
@@ -6,6 +5,7 @@ import { SiInstagram } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 import { List } from '../index';
+import { navRoutesList } from './constants.tsx';
 
 function NavLogo() {
   return (
@@ -28,13 +28,6 @@ function NavLinks() {
     </List>
   );
 }
-export const navRoutesList = [
-  'HOME',
-  // "PAGES",
-  'Portfolio',
-  'Blog',
-  'Contact',
-];
 function NavRoutes() {
   return (
     <List className={'flex gap-10 font-bold uppercase'}>

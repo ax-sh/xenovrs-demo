@@ -1,6 +1,5 @@
 import React from 'react';
-// import "virtual:windi.css";
-// import "virtual:windi-devtools";
+
 import { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';

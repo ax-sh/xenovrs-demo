@@ -1,10 +1,11 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-import Nav, { navRoutesList } from './nav';
+import Nav from './nav';
+import { navRoutesList } from './nav/constants.tsx';
 
-interface ListProps extends React.HTMLProps<HTMLUListElement> {
-  render?: (props: unknown) => React.ReactNode;
+interface ListProps extends ComponentPropsWithoutRef<'ul'> {
+  render?: (props: ReactNode) => ReactNode;
 }
 
 export function List({ children, render, ...props }: ListProps) {
