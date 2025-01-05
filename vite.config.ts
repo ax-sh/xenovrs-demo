@@ -13,9 +13,14 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  plugins: [react(), qrcode(), tsconfigPaths(), Pages()],
+  plugins: [
+    react(),
+    qrcode(),
+    tsconfigPaths(),
+    Pages({ dirs: [{ dir: 'src/pages', baseRoute: '/xenovrs-demo/' }] }),
+  ],
   server: {
     host: '0.0.0.0',
   },
-    base: "/xenovrs-demo/"
+  base: '/xenovrs-demo/',
 });
