@@ -17,7 +17,8 @@ export default defineConfig({
     react(),
     qrcode(),
     tsconfigPaths(),
-    Pages({ dirs: [{ dir: 'src/pages', baseRoute: '/xenovrs-demo/' }] }),
+    Pages(),
+    // { dirs: [{ dir: 'src/pages', baseRoute: '/xenovrs-demo/' }] }
   ],
   server: {
     host: '0.0.0.0',

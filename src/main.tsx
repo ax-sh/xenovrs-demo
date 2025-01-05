@@ -1,8 +1,8 @@
 import React from 'react';
-
 import { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+// import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import { HashRouter as Router, useRoutes } from 'react-router-dom';
 import routes from '~react-pages';
 
 import './styles.scss';
@@ -23,7 +23,7 @@ const App = () => {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/'>
       <App />
     </Router>
   </React.StrictMode>
