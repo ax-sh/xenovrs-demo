@@ -1,15 +1,8 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
-//
-// // https://vite.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
-
 import react from '@vitejs/plugin-react';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 import { defineConfig } from 'vite';
+import Pages from 'vite-plugin-pages';
 import { qrcode } from 'vite-plugin-qrcode';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
@@ -20,7 +13,7 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  plugins: [react(), qrcode(), tsconfigPaths()],
+  plugins: [react(), qrcode(), tsconfigPaths(), Pages()],
   server: {
     host: '0.0.0.0',
   },
