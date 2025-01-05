@@ -57,7 +57,7 @@ function Page() {
           className={clsx(
             'masonary',
             'row-span-3 col-span-12 grid grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-3',
-            'text-white p-20',
+            'text-white p-8 md:p-20',
             'lg:h-screen min-h-screen'
             // 'sm:[&>figure]:!aspect-square '
           )}
