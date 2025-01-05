@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import React from 'react';
 
+import { RotatedLogo } from '../ui/rotated-logo.tsx';
 import Nav from './nav';
 import { navRoutesList } from './nav/constants.tsx';
 
@@ -50,7 +51,7 @@ function NewsletterForm() {
 function Footer() {
   return (
     <footer className={'bg-yellow md:p-20 flex gap-4'}>
-      <span className={'vertical text-6xl bg-black text-white px-10'}>Xenovrs</span>
+      <RotatedLogo />
       <span className={'vertical md:hidden'}>+ 3 (425) 521 60 21</span>
       <div className={'flex-grow '}>
         <div

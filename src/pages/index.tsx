@@ -4,25 +4,12 @@ import type { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 import Layout from '../layout';
 import { Poster } from '../layout/nav/constants.tsx';
 import { MasonryGalleryGrid } from '../ui/masonry-gallery-grid.tsx';
+import { PresentSection } from '../ui/poster-present-section.tsx';
 import { SeeProjectButton } from '../ui/see-project-button.tsx';
 
 const Header = ({ children, className }: ComponentPropsWithoutRef<'h4'>) => {
   return <h4 className={clsx('text-8xl drop-shadow-md mb-10', className)}>{children}</h4>;
 };
-
-function PresentSection({ children, imageUrl }: PropsWithChildren<{ imageUrl: string }>) {
-  return (
-    <section
-      className={'bg-black min-h-screen bg-cover bg-center grid grid-cols-12 grid-rows-3'}
-      style={{
-        backgroundImage: `url(${imageUrl})`,
-        // "url(https://images.unsplash.com/photo-1496203695688-3b8985780d6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit)",
-      }}
-    >
-      {children}
-    </section>
-  );
-}
 
 function SectionLabel({ children }: PropsWithChildren) {
   return <h3 className={'uppercase font-medium'}>{children}</h3>;
