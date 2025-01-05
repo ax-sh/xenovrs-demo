@@ -32,7 +32,9 @@ function NavRoutes() {
   return (
     <List className={'flex gap-10 font-bold uppercase'}>
       {navRoutesList.map((i) => (
-        <Link to={'/' + i.toLowerCase()}>{i}</Link>
+        <Link key={i} to={`/${i.toLowerCase()}`}>
+          {i}
+        </Link>
       ))}
     </List>
   );
