@@ -58,6 +58,10 @@ function ImageCard({
   );
 }
 
+function HomeContact() {
+  return <div className={'font-bold text-6xl container mx-auto'}> Contact</div>;
+}
+
 export function TopSection() {
   return (
     <section className={'text-white  bg-black'}>
@@ -87,19 +91,21 @@ export function TopSection() {
             clients first no matter how complicated the tasks are”.
           </SmallParagraph>
         </section>
-        <section className={'h-screen grid grid-cols-12 grid-rows-12 gap-10'}>
+        <section className={'min-h-screen grid grid-cols-12 grid-rows-12'}>
           <div className='col-span-5 row-span-6 row-start-3'>
-            <ImageCard className='aspect-[1/1.3]' src={'./laura-ockel-1kDBn0OSUGw-unsplash.jpg'}>
-              {' '}
-              {/* This uses the default aspect ratio for video (16:9) */}
-              We achieve the goal
+            <ImageCard
+              className='scale-75 aspect-[1.1/1]'
+              src={'./laura-ockel-1kDBn0OSUGw-unsplash.jpg'}
+            >
+              WE ACHIEVE THE GOAL
             </ImageCard>
           </div>
           <div className='col-start-3 row-start-6 col-span-4 row-span-6'>
-            <ImageCard className='aspect-[1/1.2]' src={'./laura-ockel-1kDBn0OSUGw-unsplash.jpg'}>
-              {' '}
-              {/* Custom aspect ratio 81:53 */}
-              We develop a concept
+            <ImageCard
+              className='scale-[.90] aspect-[1/1.2]'
+              src={'./laura-ockel-1kDBn0OSUGw-unsplash.jpg'}
+            >
+              WE DEVELOP A CONCEPT
             </ImageCard>
           </div>
         </section>
@@ -120,6 +126,15 @@ export function TopSection() {
           </article>
         </section>
       </div>
+      <section className={'bg-black'}>
+        <div className={'font-bold text-6xl '}>
+          <div className={'container  mx-auto'}>LOOK WHAT</div>
+        </div>
+        <div className={'bg-white text-black'}>
+          <div className={'container font-bold text-6xl mx-auto'}>WE DO</div>
+          <HomeContact />
+        </div>
+      </section>
     </section>
   );
 }
