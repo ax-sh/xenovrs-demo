@@ -90,7 +90,7 @@ function Footer() {
           <NewsletterForm />
         </div>
         <div className={'md:flex justify-between'}>
-          <div>© Centrix 2021. All Rights Resevered</div>
+          <div>© Centrix {new Date().getFullYear()}. All Rights Resevered</div>
           <div>Privacy Policy</div>
         </div>
       </div>
