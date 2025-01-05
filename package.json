@@ -46,6 +46,7 @@
     "vite": "^6.0.7",
     "vite-plugin-pages": "^0.32.4",
     "vite-plugin-qrcode": "^0.2.3",
+    "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

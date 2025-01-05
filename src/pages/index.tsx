@@ -1,10 +1,11 @@
 import clsx from 'clsx';
-import type { PropsWithChildren } from 'react';
+import type {ComponentPropsWithoutRef, PropsWithChildren} from 'react';
 
 import Layout from '../layout';
+import { SeeProjectButton } from '../ui/see-project-button.tsx';
 
-const Header = ({ children }: PropsWithChildren) => {
-  return <h4 className={'text-8xl'}>{children}</h4>;
+const Header = ({ children, className }: ComponentPropsWithoutRef<'h4'>) => {
+  return <h4 className={clsx('text-8xl drop-shadow-md mb-10', className)}>{children}</h4>;
 };
 
 function PresentSection({ children, imageUrl }: PropsWithChildren<{ imageUrl: string }>) {
@@ -29,27 +30,46 @@ const Poster = {
   five: './gabriel-salas-YnENabLdEKY-unsplash.jpg',
 };
 
+function SectionLabel({ children }: PropsWithChildren) {
+  return <h3 className={'uppercase font-medium'}>{children}</h3>;
+}
+
 function Page() {
   return (
     <Layout>
       <PresentSection imageUrl={Poster.hero}>
         <div className={'row-start-2 col-start-3 text-white'}>
-          <h3>Photography</h3>
-          <Header>Creative</Header>
-          <Header>Color</Header>
-          <Header>Theme</Header>
-          <button type='button' className={'bg-yellow text-black px-20 py-2'}>
-            SEE PROJECT
-          </button>
+          <SectionLabel>Photography</SectionLabel>
+
+          <Header>
+            Creative <br />
+            Color <br />
+            Theme
+          </Header>
+          <SeeProjectButton />
         </div>
       </PresentSection>
       {/*old https://source.unsplash.com/-v7EOw5SA4I*/}
       <PresentSection imageUrl={Poster.second}>
         <div className={'row-start-2 col-start-3 text-white'}>
-          <h3>Photography</h3>
-          <Header>Creative</Header>
-          <Header>Color</Header>
-          <Header>Theme</Header>
+          <SectionLabel>Photography</SectionLabel>
+          <Header className={""}>
+            Contrast <br />
+            Color <br />
+            Theme
+          </Header>
+        <SeeProjectButton />
+        </div>
+      </PresentSection>
+      <PresentSection imageUrl={Poster.second}>
+        <div className={'row-start-2 col-start-3 text-white'}>
+          <SectionLabel>Photography</SectionLabel>
+          <Header className={""}>
+            Contrast <br />
+            Color <br />
+            Theme
+          </Header>
+          <SeeProjectButton />
         </div>
       </PresentSection>
       <PresentSection imageUrl={Poster.third}>
