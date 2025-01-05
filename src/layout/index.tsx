@@ -36,7 +36,7 @@ function NewsletterForm() {
       <input
         type={'email'}
         className={
-          'active:!outline-0 outline-0 w-full block bg-transparent border-0 border-b-4 p-2 border-b-blue'
+          'focus:outline-none active:outline-none outline-none w-full block bg-transparent border-0 border-b-4 p-2 border-b-blue'
         }
       />
       <p className={'text-xs font-bold'}>
@@ -59,15 +59,16 @@ function Footer() {
           }
         >
           <span className={'vertical hidden md:inline-block'}>+ 3 (425) 521 60 21</span>
-          <List>
+          <List className={'uppercase'}>
             <strong className={'text-xl'}>Quick Links</strong>
             {navRoutesList.map((i) => (
               <a
                 href='.'
                 key={`${i}-quick-links`}
-                className={
-                  'uppercase font-bold !text-[#6657ff] hover:!text-gray-600 cursor-pointer'
-                }
+                className={clsx(
+                  'font-bold !text-brand-link hover:!text-brand-linkHover ',
+                  'cursor-pointer'
+                )}
               >
                 {i}
               </a>
@@ -80,7 +81,7 @@ function Footer() {
                 key={`follow-${value}-${key}`}
                 href={value}
                 className={
-                  'uppercase font-bold !text-[#c457ff] hover:!text-gray-600 pointer cursor-pointer'
+                  'uppercase font-bold !text-[#008080] hover:!text-gray-600 pointer cursor-pointer'
                 }
               >
                 {key}

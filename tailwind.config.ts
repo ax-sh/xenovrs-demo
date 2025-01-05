@@ -11,9 +11,10 @@ const config: Config = {
         yellow: {
           DEFAULT: '#FFFE55',
         },
-        blue:{
-          DEFAULT: "#2563eb"
-        }
+        brand: { link: '#004B87', accent: '#FF6B6B', linkHover: '#333' },
+        blue: {
+          DEFAULT: '#2563eb',
+        },
       },
     },
   },
