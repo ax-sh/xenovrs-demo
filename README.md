@@ -1,4 +1,5 @@
-# xenovrs-demo page
+# xenovrs page
+### A responsive landing page made with react and tailwind
 
 ## Stacks
 <div>
