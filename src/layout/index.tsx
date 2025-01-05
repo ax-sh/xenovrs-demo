@@ -36,7 +36,7 @@ function NewsletterForm() {
       <input
         type={'email'}
         className={
-          'active:outline-0 outline-0 w-full block bg-transparent border-b-3 p-2 !border-[#2563eb]'
+          'active:!outline-0 outline-0 w-full block bg-transparent border-0 border-b-4 p-2 !border-b-blue'
         }
       />
       <p className={'text-xs font-bold'}>
