@@ -20,27 +20,33 @@ function PresentSection({ children, imageUrl }: React.PropsWithChildren<{ imageU
   );
 }
 
-const Poster = {hero:"luke-braswell-oYFv-_JKsVk-unsplash.jpg", second:'./thought-catalog--v7EOw5SA4I-unsplash.jpg'}
+const Poster = {
+  hero: './luke-braswell-oYFv-_JKsVk-unsplash.jpg',
+  second: './thought-catalog--v7EOw5SA4I-unsplash.jpg',
+  third: './kimson-doan-HD8KlyWRYYM-unsplash.jpg',
+};
 
 function Page() {
   return (
     <Layout>
-      <PresentSection imageUrl={'https://source.unsplash.com/oYFv-_JKsVk'}>
-        <div className={'row-start-2 col-start-3 text-white'}>
-          <h3>Photography</h3>
-          <Header>Creative</Header>
-          <Header>Color</Header>
-          <Header>Cheme</Header>
-          <button className={'bg-yellow text-black px-20 py-2'}>SEE PROJECT</button>
-        </div>
-      </PresentSection>
-      {/*old https://source.unsplash.com/-v7EOw5SA4I*/}
       <PresentSection imageUrl={Poster.hero}>
         <div className={'row-start-2 col-start-3 text-white'}>
           <h3>Photography</h3>
           <Header>Creative</Header>
           <Header>Color</Header>
-          <Header>Cheme</Header>
+          <Header>Theme</Header>
+          <button type='button' className={'bg-yellow text-black px-20 py-2'}>
+            SEE PROJECT
+          </button>
+        </div>
+      </PresentSection>
+      {/*old https://source.unsplash.com/-v7EOw5SA4I*/}
+      <PresentSection imageUrl={Poster.third}>
+        <div className={'row-start-2 col-start-3 text-white'}>
+          <h3>Photography</h3>
+          <Header>Creative</Header>
+          <Header>Color</Header>
+          <Header>Theme</Header>
         </div>
       </PresentSection>
       <PresentSection imageUrl={Poster.second}>
@@ -50,19 +56,19 @@ function Page() {
           }
         >
           <figure className={'row-span-2'}>
-            <img src={Poster.second} />
+            <img alt='' src={Poster.second} />
             <caption>Images Tell a Story</caption>
           </figure>
           <figure className={'md:row-span-1 md:col-start-2'}>
-            <img src={Poster.second} />
+            <img alt='' src={Poster.second} />
             <caption>Images Tell a Story</caption>
           </figure>
           <figure className={'md:row-span-1 md:col-start-3'}>
-            <img src={Poster.second} />
+            <img alt='' src={Poster.second} />
             <caption>Images Tell a Story</caption>
           </figure>
           <figure className={'md:col-start-2 md:col-span-2 md:row-start-2 md:row-end-3'}>
-            <img src={Poster.second} />
+            <img alt='' src={Poster.second} />
             <caption>Images Tell a Story</caption>
           </figure>
         </div>
